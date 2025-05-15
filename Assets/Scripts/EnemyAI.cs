@@ -12,6 +12,6 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        
+        nMA.SetDestination(target.transform.position);
     }
 }
