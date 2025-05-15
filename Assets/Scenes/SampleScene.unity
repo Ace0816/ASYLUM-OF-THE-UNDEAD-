@@ -7582,7 +7582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1437810793}
   nMA: {fileID: 768726055}
-  chaseRange: 2.41
+  chaseRange: 2.4
 --- !u!43 &899587963
 Mesh:
   m_ObjectHideFlags: 0
