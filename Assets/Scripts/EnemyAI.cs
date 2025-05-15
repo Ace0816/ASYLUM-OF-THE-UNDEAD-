@@ -10,8 +10,17 @@ public class EnemyAI : MonoBehaviour
     //ref to enemy position
     [SerializeField] NavMeshAgent nMA;
 
+    //parameters
+    [SerializeField] float chaseRange = 1f;
+
     private void Update()
     {
+        //uses the NavMeshAgent Variable to update the destination to the players position, allowing the NMA to be able to calcuate a new path.
         nMA.SetDestination(target.transform.position);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 }
