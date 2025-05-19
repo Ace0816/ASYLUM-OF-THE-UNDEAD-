@@ -10,9 +10,12 @@ public class EnemyAI : MonoBehaviour
     //ref to enemy position
     [SerializeField] NavMeshAgent nMA;
 
+    [SerializeField] Animator anim;
+
     //parameters
     [SerializeField] float chaseRange = 3.5f;
     float distanceToTarget;
+    float turnSpeed = 5f;
 
     private void Update()
     {
@@ -25,7 +28,14 @@ public class EnemyAI : MonoBehaviour
         {
             nMA.SetDestination(target.transform.position);
             //uses the NavMeshAgent Variable to update the destination to the players position, allowing the NMA to be able to calcuate a new path.
+            anim.SetTrigger("movingTrigger");
         }
+    }
+
+    private void FaceTarget()
+    {
+        Quaternion lookRot = Quaternion.LookRotation(new Vector3(target.position.x - transform.position.x, 0, target.position.z - transform.position.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * turnSpeed);
     }
 
     private void OnDrawGizmosSelected()
@@ -33,4 +43,5 @@ public class EnemyAI : MonoBehaviour
         //visualises on the enemy asset the chase range
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
+
 }

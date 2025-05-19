@@ -6361,7 +6361,7 @@ Animator:
   m_GameObject: {fileID: 7901366144787319798}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e1af740f30dfdb14a9cbcc62f6e78120, type: 3}
-  m_Controller: {fileID: 9100000, guid: f6482d4ee17f77042b91e0a421b67d08, type: 2}
+  m_Controller: {fileID: 9100000, guid: b540c2df386bec149bf22a009f54a3ae, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6406,6 +6406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   nMA: {fileID: 307579933942326047}
+  anim: {fileID: 7901366144794753078}
   chaseRange: 3.5
 --- !u!136 &1426356020
 CapsuleCollider:
