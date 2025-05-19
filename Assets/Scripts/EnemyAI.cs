@@ -30,6 +30,7 @@ public class EnemyAI : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        //visualises on the enemy asset the chase range
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 }
