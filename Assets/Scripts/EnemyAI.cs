@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] NavMeshAgent nMA;
 
     //parameters
-    [SerializeField] float chaseRange = 2.4f;
+    [SerializeField] float chaseRange = 5f;
     float distanceToTarget;
 
     private void Update()
