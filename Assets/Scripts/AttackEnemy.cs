@@ -16,6 +16,7 @@ public class AttackEnemy : MonoBehaviour
 
     private void Update()
     {
+        //adds a delay to how often you can click the mouse and trigger the animation
         if (Input.GetMouseButtonDown(0) && Time.time >= nextAllowedClickTime)
         {
             anim.Play("Swing", 0, 0f);
