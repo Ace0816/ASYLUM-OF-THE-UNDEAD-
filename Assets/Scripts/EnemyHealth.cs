@@ -13,6 +13,15 @@ public class EnemyHealth : MonoBehaviour
         enemyAI = GetComponent<EnemyAI>();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Weapon")
+        {
+            TakeDamage(other.GetComponent<AttackEnemy>().weaponDamage);
+            Debug.Log("Enemy Damaged");
+        }
+    }
+
     public void TakeDamage(float weaponDamage)
     {
         enemyAI.OnDamageTaken();

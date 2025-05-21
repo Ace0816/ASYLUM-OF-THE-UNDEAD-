@@ -180,31 +180,42 @@ PrefabInstance:
       propertyPath: weaponToDestroy
       value: 
       objectReference: {fileID: 984474753}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Size.z
+      value: 0.8191316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Center.x
+      value: 0.1209642
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Center.y
+      value: 0.016400384
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Center.z
+      value: -0.24010295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.31770107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1659929
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158028763, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1633328677, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: weaponToDestroy
       value: 
       objectReference: {fileID: 984474753}
-    - target: {fileID: 2141880316, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142102492, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.465
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142102492, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.613
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142102492, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.557
-      objectReference: {fileID: 0}
-    - target: {fileID: 4623125772698471593, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: Spotlight
-      value: 
-      objectReference: {fileID: 1965894539}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &67741436 stripped
@@ -11252,7 +11263,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1426356020, guid: f2e03fd1cffea284890ee861660f8b1d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3846489075927548804, guid: f2e03fd1cffea284890ee861660f8b1d,
         type: 3}
@@ -11263,6 +11274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Base mesh MonsterMutant7 skin4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901366144787319798, guid: f2e03fd1cffea284890ee861660f8b1d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7901366144787748822, guid: f2e03fd1cffea284890ee861660f8b1d,
         type: 3}
@@ -11339,12 +11355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6257135be776ec349aa96aead4cdfd5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!108 &1965894539 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 1272712526, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 3}
-  m_PrefabInstance: {fileID: 67741435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1981977631
 Mesh:
   m_ObjectHideFlags: 0
