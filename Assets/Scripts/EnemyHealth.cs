@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
         hP -= weaponDamage;
         if(hP <= 0)
         {
-            Destroy(gameObject);
+            GetComponent<Animator>().SetTrigger("dyingTrigger");
         }
     }
 }

@@ -20,6 +20,7 @@ public class AttackEnemy : MonoBehaviour
     private IEnumerator Swing()
     {
         //adds a delay to how often you can click the mouse and trigger the animation
+        //this coroutine was bought to you by Angelo
         {
             nextAllowedClickTime = Time.time + clickCooldown;
             attackCol.enabled = true;
