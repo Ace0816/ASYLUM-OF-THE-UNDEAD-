@@ -17,6 +17,14 @@ public class EnemyAI : MonoBehaviour
     float distanceToTarget;
     float turnSpeed = 5f;
 
+    //states
+    bool isAggro = false;
+
+    public void OnDamageTaken()
+    {
+        isAggro = true;
+    }
+
     private void Update()
     {
         //uses that chase range and distance to target parameter to set up that the enemy will only begin moving once the player enters that chase range

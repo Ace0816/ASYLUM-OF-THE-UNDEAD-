@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AttackEnemy : MonoBehaviour
 {
-    //weapon animation code
     private Animator anim;
     public float clickCooldown = 1f;
     private float nextAllowedClickTime = 0f;
+    public float weaponDamage;
 
     private void Start()
     {
