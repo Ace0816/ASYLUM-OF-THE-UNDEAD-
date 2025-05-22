@@ -29,6 +29,8 @@ public class EnemyHealth : MonoBehaviour
         if(hP <= 0)
         {
             GetComponent<Animator>().SetTrigger("dyingTrigger");
+            GetComponent<EnemyAI>().enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
         }
     }
 }
