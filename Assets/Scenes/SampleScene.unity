@@ -7814,6 +7814,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &679327120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b92e432993e63b740a483cc7a150f000,
+    type: 3}
+  m_PrefabInstance: {fileID: 1987098193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9358,6 +9364,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1158028762, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: weaponToDestroy
+      value: 
+      objectReference: {fileID: 679327120}
+    - target: {fileID: 1633328677, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: weaponToDestroy
+      value: 
+      objectReference: {fileID: 679327120}
     - target: {fileID: 2141880316, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10692,6 +10706,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1652560127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2141880316, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1185631207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1822036965
 Mesh:
   m_ObjectHideFlags: 0
@@ -11480,6 +11500,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6257135be776ec349aa96aead4cdfd5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1941632995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941632988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35ec4afac5711341b6814d6f181feea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pH: {fileID: 2013032669}
 --- !u!43 &1981977631
 Mesh:
   m_ObjectHideFlags: 0
@@ -11701,7 +11734,7 @@ PrefabInstance:
     - target: {fileID: 984474758, guid: b92e432993e63b740a483cc7a150f000, type: 3}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1652560127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
 --- !u!1 &2013032661 stripped
@@ -11730,6 +11763,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1185631207}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2013032669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013032661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7f71f5d8036b149914091dc22f447f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &2026899487
 Mesh:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float chaseRange = 3.5f;
     float distanceToTarget;
     float turnSpeed = 5f;
+    float enemyDeceleration = 0.2f;
 
     //states
     bool isAggro = false;
@@ -37,6 +38,12 @@ public class EnemyAI : MonoBehaviour
             nMA.SetDestination(target.transform.position);
             //uses the NavMeshAgent Variable to update the destination to the players position, allowing the NMA to be able to calcuate a new path.
             anim.SetTrigger("movingTrigger");
+            anim.SetBool("isAttacking", false);
+        }
+
+        if (distanceToTarget - enemyDeceleration <= nMA.stoppingDistance)
+        {
+            anim.SetBool("isAttacking", true);
         }
     }
 
