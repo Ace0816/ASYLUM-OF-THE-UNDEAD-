@@ -9364,6 +9364,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 12474086, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1158028762, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: weaponToDestroy
       value: 

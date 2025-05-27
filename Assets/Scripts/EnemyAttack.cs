@@ -11,5 +11,6 @@ public class EnemyAttack : MonoBehaviour
     {
         if (pH == null) { return; }
         pH.TakeDamage(damage);
+        Debug.Log("Player Damaged");
     }
 }
