@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] PlayerHealth pH;
-    float damage = 25f;
+    float damage = 50f;
 
     public void AttackHitEvent()
     {

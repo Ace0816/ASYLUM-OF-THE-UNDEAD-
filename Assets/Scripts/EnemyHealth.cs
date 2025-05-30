@@ -8,9 +8,16 @@ public class EnemyHealth : MonoBehaviour
 
     EnemyAI enemyAI;
 
+    bool isDead = false;
+
     private void Start()
     {
         enemyAI = GetComponent<EnemyAI>();
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +35,8 @@ public class EnemyHealth : MonoBehaviour
         hP -= weaponDamage;
         if(hP <= 0)
         {
+            if(isDead) { return;  }
+            isDead = true;
             GetComponent<Animator>().SetTrigger("dyingTrigger");
             GetComponent<EnemyAI>().enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;

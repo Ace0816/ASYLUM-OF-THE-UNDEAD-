@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] NavMeshAgent nMA;
 
     [SerializeField] Animator anim;
+    [SerializeField] EnemyHealth eHealth;
 
     //parameters
     [SerializeField] float chaseRange = 3.5f;
@@ -20,6 +22,8 @@ public class EnemyAI : MonoBehaviour
 
     //states
     bool isAggro = false;
+
+    bool isAttacking = false;
 
     public void OnDamageTaken()
     {
@@ -33,18 +37,57 @@ public class EnemyAI : MonoBehaviour
         distanceToTarget = Vector3.Distance(transform.position, target.position);
         //This method calculates the shortest distance between the two input points
 
-        if (distanceToTarget <= chaseRange)
+        if (eHealth.IsDead())
         {
-            nMA.SetDestination(target.transform.position);
-            //uses the NavMeshAgent Variable to update the destination to the players position, allowing the NMA to be able to calcuate a new path.
-            anim.SetTrigger("movingTrigger");
-            anim.SetBool("isAttacking", false);
+            enabled = false;
+            nMA.enabled = false;
+        }
+
+        if (isAggro)
+        {
+            EngageTarget();
+        }
+
+        else if (distanceToTarget <= chaseRange)
+        {
+            isAggro = true;
+        }
+
+        Animations();
+    }
+
+    private void EngageTarget()
+    {
+        FaceTarget();
+
+        if (distanceToTarget >= nMA.stoppingDistance)
+        {
+            ChaseTarget();
         }
 
         if (distanceToTarget - enemyDeceleration <= nMA.stoppingDistance)
         {
-            anim.SetBool("isAttacking", true);
+            AttackTarget();
         }
+    }
+
+    private void ChaseTarget()
+    {
+        anim.SetTrigger("movingTrigger");
+        isAttacking = false;
+        //anim.SetBool("isAttacking", false);
+        nMA.SetDestination(target.transform.position);
+    }
+
+    private void AttackTarget()
+    {
+        isAttacking = true;
+        //anim.SetBool("isAttacking", true);
+    }
+
+    private void Animations()
+    {
+        anim.SetBool("isAttacking", true);
     }
 
     private void FaceTarget()
@@ -58,5 +101,7 @@ public class EnemyAI : MonoBehaviour
         //visualises on the enemy asset the chase range
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
+
+   
 
 }
