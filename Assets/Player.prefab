@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 1338092303810296688}
   - component: {fileID: 1338092302467751524}
   - component: {fileID: 1338092302467751535}
+  - component: {fileID: 1017931867}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,6 +334,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7f71f5d8036b149914091dc22f447f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 0}
+  damageFlash: {fileID: 1017931867}
+--- !u!114 &1017931867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338092303252775925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b09c2d28ff7c8468b006d29cb9f161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageOverlay: {fileID: 0}
+  flashDuration: 1
+  flashColor: {r: 0.4056604, g: 0, b: 0, a: 0.49019608}
 --- !u!1 &1338092303252775927
 GameObject:
   m_ObjectHideFlags: 0
